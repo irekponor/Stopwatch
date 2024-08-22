@@ -3,6 +3,7 @@ body{
     align-items: center;
     padding: 16% 0 0 24%;
 }
+
 .stopwatch{
     background: #ffb326;  
     width: 70%;  
@@ -13,6 +14,7 @@ body{
     align-items: center;
     padding: 20px;
 }
+
 .display{
     font-size: 5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
