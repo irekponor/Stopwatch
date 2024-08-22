@@ -1,10 +1,4 @@
-import { useState, useEffect, useRef } from "react";
 
-function Stopwatch() {
-  const [isRunning, setIsRunning] = useState(false);
-  const [elaspedTime, setElaspedTime] = useState(0);
-  const intervalIdRef = useRef(0);
-  const startTimeRef = useRef(0);
 
   useEffect(() => {
     if (isRunning) {
