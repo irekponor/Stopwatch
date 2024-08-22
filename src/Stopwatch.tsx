@@ -1,4 +1,10 @@
+import { useState, useEffect, useRef } from "react";
 
+function Stopwatch() {
+  const [isRunning, setIsRunning] = useState(false);
+  const [elaspedTime, setElaspedTime] = useState(0);
+  const intervalIdRef = useRef(0);
+  const startTimeRef = useRef(0);
 
   useEffect(() => {
     if (isRunning) {
@@ -34,7 +40,7 @@
 
     hours = String(hours).padStart(2, "0");
     minutes = String(minutes).padStart(2, "0");
-    seconds = String(seconds).padStart(2, "0"); 
+    seconds = String(seconds).padStart(2, "0");
     milliseconds = String(milliseconds).padStart(2, "0");
 
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
