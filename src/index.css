@@ -37,20 +37,43 @@ body{
     padding-left: 9%;
     margin-bottom: 20px;
     font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: cursive;
 }
 
 @media only screen and (max-width: 700px){
     .display{
         font-size: 1.4rem;
     }
+
+    .controls{
+        align-items: center;
+        justify-content: center;
+        padding-left: 0.5rem;
+    }
     .controls button{
         font-size: 18px;
         font-weight: 100;
         padding: 10px 30px; 
-        margin: 2 0px;
-
+        margin: 20px;
+    }
+    .Name{
+        font-size: 12px;
+        padding-left: 0;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: cursive;
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .display{
+        font-size: 3rem;
+    }
+    .Name{
+        font-size: 20px;
+        padding-left: 0;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: cursive;
+    }
+}
