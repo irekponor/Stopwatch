@@ -31,21 +31,17 @@ function Stopwatch() {
     setElaspedTime(0);
     setIsRunning(false);
   }
-
-  function formatTime() {
-    let hours = Math.floor(elaspedTime / (1000 * 60 * 60));
-    let minutes = Math.floor((elaspedTime / (1000 * 60)) % 60);
-    let seconds = Math.floor((elaspedTime / 1000) % 60);
-    let milliseconds = Math.floor((elaspedTime % 1000) / 10);
-
-    hours = (hours < 10 ? "0" : "") + hours;
-    minutes = (minutes < 10 ? "0" : "") + minutes;
-    seconds = (seconds < 10 ? "0" : "") + seconds;
-    milliseconds = (milliseconds < 10 ? "0" : "") + milliseconds;
-
-    return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+  function formatTimePart(value: number): string {
+    return value.toString().padStart(2, "0");
   }
 
+  let hours = formatTimePart(Math.floor(elaspedTime / (1000 * 60 * 60)));
+  let minutes = formatTimePart(Math.floor((elaspedTime / (1000 * 60)) % 60));
+  let seconds = formatTimePart(Math.floor((elaspedTime / 1000) % 60));
+  let milliseconds = formatTimePart(Math.floor((elaspedTime % 1000) / 10));
+
+  return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+}
   return (
     <div className="stopwatch">
       <div className="display">{formatTime()}</div>
