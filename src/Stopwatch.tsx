@@ -38,6 +38,11 @@ function Stopwatch() {
     let seconds = Math.floor((elaspedTime / 1000) % 60);
     let milliseconds = Math.floor((elaspedTime % 1000) / 10);
 
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+    milliseconds = (milliseconds < 10 ? "0" : "") + milliseconds;
+
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }
 
